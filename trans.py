@@ -80,7 +80,7 @@ for i in range(50000):
     # print(train_samples[i].shape)
     img = transform_convert(train_samples[i].cpu(), transform_train)
     # img = Image.fromarray(img.permute(1, 2, 0).numpy())
-    saved_path = datasets_saved_dir + '/train/train_' + str(i) + '.png'
+    saved_path = datasets_saved_dir + '/train/train_' + str(i) + '.jpg'
     with open(datasets_saved_dir + "/train_path.txt", "a") as f:
         f.write(str(int(train_labels[i])) + '    ' + saved_path + '\n')  # 自带文件关闭功能，不需要再写f.close()
     img.save(saved_path)
@@ -94,7 +94,7 @@ with open(datasets_saved_dir + "/test_path.txt", "w") as f:
 for i in range(10000):
     img = transform_convert(test_samples[i].cpu(), transform_test)
     # img = Image.fromarray(img.permute(1, 2, 0).numpy())
-    saved_path = datasets_saved_dir + '/test/test_' + str(i) + '.png'
+    saved_path = datasets_saved_dir + '/test/test_' + str(i) + '.jpg'
     with open(datasets_saved_dir + "/test_path.txt", "a") as f:
         f.write(str(int(test_labels[i])) + '    ' + saved_path + '\n')  # 自带文件关闭功能，不需要再写f.close()
     img.save(saved_path)
