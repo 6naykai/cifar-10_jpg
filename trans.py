@@ -67,7 +67,7 @@ for batch_id, batch in enumerate(test_loader):
         print((batch_id + 1) / 1000)
 print("test ok")
 
-torch.save(train_samples, datasets_saved_dir + '/train_test_pth/train_samples.pth')
+torch.save(train_samples, datasets_saved_dir + '/train_test_pth/train_samples.pth')     # 使用torch.load()读取
 torch.save(train_labels, datasets_saved_dir + '/train_test_pth/train_labels.pth')
 torch.save(test_samples, datasets_saved_dir + '/train_test_pth/test_samples.pth')
 torch.save(test_labels, datasets_saved_dir + '/train_test_pth/test_labels.pth')
